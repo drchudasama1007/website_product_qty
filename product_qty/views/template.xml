@@ -1,0 +1,49 @@
+<odoo>
+
+    <template id="selection_product" name="Product Selection" inherit_id="website_sale.product">
+        <xpath expr="//a[@id='add_to_cart']" position="before">
+            <div class="row pt24">
+                <input id="product_price" type="hidden" t-att-value="combination_info['price']"/>
+                <div class="col-md-6">
+                    <lable>Initial Weight</lable>
+                    <select id="select_uom" class="form-control">
+                        <option>Please select...</option>
+                        <option value="250">250 grams</option>
+                        <option value="500">500 grams</option>
+                        <option value="1">1 KG</option>
+                        <option value="2">2 KG</option>
+                        <option value="3">3 KG</option>
+                        <option value="4">4 KG</option>
+                        <option value="5">5 KG</option>
+                        <option value="6">6 KG</option>
+                        <option value="7">7 KG</option>
+                        <option value="8">8 KG</option>
+                        <option value="9">9 KG</option>
+                        <option value="10">10 KG</option>
+                        <option value="11">Need More</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <lable class="add_weight d-none">Add'l Weight</lable>
+                    <select id="select_sub_uom" class="d-none form-control">
+                        <option value="0">Please select...</option>
+                        <option value="0.25">1/4 KG</option>
+                        <option value="0.50">1/2 KG</option>
+                        <option value="0.75">3/4 KG</option>
+                    </select>
+                    <lable class="need_weight d-none">Weight</lable>
+                    <input type="number" step="0.01" class="form-control d-none" id="need_more"/>
+                    <div class="error_need d-none" style="background:#f75555;color:white">
+                        <lable>This value should be greater than or equal to 11.</lable>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt24">
+                <div class="col-md-12">
+                    <p id="uom_dscription" style="color: #000000;font-weight: 700;font-size: 20px;"></p>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

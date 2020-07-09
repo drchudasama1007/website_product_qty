@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Odoo Helper: Inherited Assets Front-end to add js file -->
+    <template id="assets_front_products_qty" inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/product_qty/static/src/js/quantity.js"></script>
+        </xpath>
+    </template>
+</odoo>
+
+
